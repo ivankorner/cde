@@ -163,7 +163,8 @@
         echo '
         <div class="alert alert-success d-flex align-items-center"         role="alert">
                 <div>
-                    <strong> <i class="bi bi-hand-thumbs-up-fill""></i> ¡USUARIO REGISTRADO!</strong> <br>
+                    <strong> <i class="bi bi-hand-thumbs-up-fill
+                    ""></i> ¡USUARIO REGISTRADO!</strong> <br>
                     El usuario se registro con exito
                 </div>
             </div> 
