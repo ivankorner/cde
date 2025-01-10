@@ -29,12 +29,14 @@
 
                                     <div data-mdb-input-init class="form-outline mb-4 input-group">
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></i></span>
-                                        <input type="password" name="login_clave" pattern="[a-zA-Z0-9$@]{7,100}" maxlength="100" class="form-control" placeholder="Password" />
+                                        <input type="password" name="login_clave" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" class="form-control" placeholder="Password" />
 
                                     </div>
 
                                     <div class="text-center pt-1 mb-5 pb-1">
-                                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Ingresar</button>
+
+                                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
+
                                         <a class="text-muted" href="#!">Olvidó su Password?</a>
                                     </div>
 
@@ -43,18 +45,18 @@
                                         <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Crear</button>
                                     </div>
 
+                                    <?php
+                                    if (isset($_POST['login_usuario']) && isset($_POST['login_clave'])) {
+                                        require_once "./php/main.php";
+                                        require_once "./php/iniciar_sesion.php";
+                                    }
+                                    ?>
+
                                 </form>
 
                             </div>
                         </div>
-                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                <h4 class="mb-4">We are more than just a company</h4>
-                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
